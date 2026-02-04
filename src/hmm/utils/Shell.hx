@@ -25,6 +25,7 @@ typedef ShellInitOptions = {
   hmmDirectory : String, 
   workingDirectory : String,
   isWin : Bool,
+  isIOS : Bool,
   isQuiet: Bool,
 }
 
