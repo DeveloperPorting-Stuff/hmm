@@ -26,6 +26,7 @@ class Hmm {
         hmmDirectory: Sys.getCwd(),
         workingDirectory: args.pop(),
         isWin: Sys.systemName() == "Windows",
+        isIOS: Args.hasAny(args, ['-ios']),
         isQuiet: Args.hasAny(args, ['--quiet', '-q']),
       });
 

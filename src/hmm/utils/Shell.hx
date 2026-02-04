@@ -32,12 +32,14 @@ class Shell {
   public static var hmmDirectory(default, default) : String;
   public static var workingDirectory(default, default) : String;
   public static var isWin(default, default) : Bool;
+  public static var isIOS(default, default) : Bool;
   public static var isQuiet(default, default) : Bool;
 
   public static function init(options : ShellInitOptions) : Void {
     hmmDirectory = options.hmmDirectory;
     workingDirectory = options.workingDirectory;
     isWin = options.isWin;
+    isIOS = options.isIOS;
     isQuiet = options.isQuiet;
     AnsiColors.disabled = isWin;
     setCwd(workingDirectory, { log: false });

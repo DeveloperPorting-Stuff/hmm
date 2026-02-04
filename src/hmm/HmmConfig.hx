@@ -26,10 +26,11 @@ typedef HmmConfig = {
 
 class HmmConfigs {
   public static var HMM_JSON_FILE_NAME = "hmm.json";
+  public static var HMM_JSON_FILE_NAME_IOS = "hmm-ios.json";
   public static var HAXELIB_REPO_DIR_NAME = ".haxelib";
 
   public static function getHmmJsonPath():String {
-    return Path.join([Shell.workingDirectory, HMM_JSON_FILE_NAME]);
+    return Path.join([Shell.workingDirectory, Shell.isIOS ? HMM_JSON_FILE_NAME_IOS : HMM_JSON_FILE_NAME]);
   }
 
   public static function getLocalHaxelibRepoPath():String {
